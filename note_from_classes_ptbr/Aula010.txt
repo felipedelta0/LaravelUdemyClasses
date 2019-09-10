@@ -1,0 +1,113 @@
+Aula 010: Estrutura de Pastas de um projeto Laravel
+
+    -- app/ <<Pasta mais importante para o desenvolvimento>>
+        -- Console/
+            -- Kernel.php <<Criar novos comandos para o console>>
+        -- Exceptions/
+            -- Handler.php <<Podemos criar e tratar novas requisições com essa class>>
+        -- Http/ <<Controladores que recebem requisições do cliente e middlewares>>
+            -- Controllers/ <<Controladores>>
+                --Auth/ <<Controladores de Autenticação>>
+                    --ForgotPasswordController.php
+                    -- LoginController.php
+                    -- RegisterController.php
+                    -- ResetPasswordController.php
+                    -- VerificationController.php
+                -- Controller.php <<Classe Base de Controladres>>
+            -- Middleware/ <<Classes que serão chamadas no momento que uma requisição chega do cliente>>
+                -- Authenticate.php
+                -- CheckForMaintenanceMode.php
+                -- EncryptCookies.php
+                -- RedirectIfAuthenticated.php
+                -- TrimStrings.php
+                -- TrustProxies.php
+                -- VerifyCsrfToken.php
+            -- Kernel.php
+        -- Providers/ <<Inicialização do projeto, classes com register e boot: register registra facade e etc, boot para registrar view // Opcionais>>
+        -- User.php <<Modelos geralmente ficam aqui dentro, esse modelo de user já pode ser usado>>
+    -- bootstrap/ <<Pasta relacionada ao boot da aplicação>>
+        -- cache/
+        -- app.php
+    -- config/ <<Pasta de configurações da aplicação>>
+        -- app.php
+        -- auth.php
+        -- broadcasting.php
+        -- cache.php
+        -- database.php
+        -- filesystems.php
+        -- hashing.php
+        -- logging.php
+        -- mail.php
+        -- queue.php
+        -- services.php
+        -- session.php
+        -- view.php
+    -- database/ <<Relacionada a base de dados>>
+        -- factories/
+        -- migrations/ <<Migrations para criar as tabelas>>
+            --2014_10_12_000000_create_users_table.php
+        -- seeds/ <<Arquivo que irão inicializar tabelas e base de dados com algumas informações>>
+            -- DatabaseSeeder.php
+        -- .gitignore
+    -- public/ <<Pasta que será acessível de fora, domínio irá apontar para essa pasta>>
+        -- css/ <<Incluir estilização do projeto>>
+            -- app.css
+        -- js/ <<Incluir scripts do projeto>>
+            -- app.js
+        -- .htaccess
+        -- favicon.ico
+        -- index.php <<Arquivo que irá receber todas as requisições de rotas. Ponto de partida da aplicação>>
+        -- robots.txt
+    -- resources/ <<>>
+        -- js/ <<Arquivos que serão compilados e gerado apenas um pra ser usado no projeto, o compilado irá ser executado pela pasta public>>
+            -- components/
+                -- app.js
+                -- bootstrap.js
+        -- lang/ <<Línguas para o projeto, se precisas de outra linguagem, por padrão vem mensagens de autenticação>>
+            -- en/ <<Laravel inicialmente vem apenas com inglês>>
+                -- auth.php
+                -- pagination.php
+                -- passwords.php
+                -- validation.php
+        -- sass/ <<SASS para estilização>> -> ( Estudar SASS futuramente )
+            -- _variables.scss
+            -- app.scss
+        -- views/ <<Todas as views criadas irão ser feitas nessa pasta>>
+            -- welcome.blade.php
+    -- routes/ <<Pasta de rotas do Sistema>>
+        -- api.php <<Rotas de API para a aplicação>>
+        -- channels.php <<Registra todos os eventos de canais broadcast suportados pela Aplicaçao>>
+        -- console.php <<Rotas de Comandos/Console para criar novos comandos>>
+        -- web.php <<Rotas WEB/Navegador, São carregadas pelo RouteServiceProvider>>
+    -- storage/ <<Pode ser usado para criação de novas pastas de armazenamento>>
+        -- app/
+            -- public/
+            -- .gitignore
+        -- framework/ <<Armazenamento de cache, view...>>
+            -- cache/
+            -- sessions/
+            -- testing/
+            -- views/
+            -- .gitignore
+        -- logs/ <<Possível armazenar os logs da aplicação>>
+            -- .gitignore
+    -- tests/ <<Toda a parte de testes da aplicação>>
+        -- Feature/
+        -- Unit/
+        -- CreatesApplication.php
+        -- TestCase.php
+    -- vendor/ <<Contém todo o CORE do Laravel, todas as dependências. NÃO MEXER NESSA PASTA, INCLUIR NO .gitignore, pois pode ser recuperada com "composer install">>
+    -- .editorconfig
+    -- .env <<Configuração do Ambiente. Cada aplicação deve criar uma nova APP_KEY. Pode ser incluído no .gitignore>>
+    -- .env.example
+    -- .gitattributes
+    -- .gitignore
+    -- .styleci.yml
+    -- artisan <<Script para os comandos do artisan>>
+    -- composer.json <<Para incluir com o Composer Install>>
+    -- composer.lock
+    -- package.json <<Para trabalhar com NPM Install>>
+    -- phpunit.xml <<Configurações de teste>>
+    -- server.php
+    -- webpack.mix.js
+    -- yarn.lock

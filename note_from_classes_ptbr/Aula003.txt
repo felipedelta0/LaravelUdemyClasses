@@ -1,0 +1,29 @@
+Aula 003: Criação do Projeto
+
+    Criação do projeto via Composer Create-Project. Exemplo:
+    No powershell:                            (pacote)        (nome)  
+        composer create-project --prefer-dist laravel/laravel blog
+
+    Usando instalador do Laravel, rodar o comando abaixo.
+
+    No powershell:
+
+        composer global require laravel/installer
+
+    Inserir o instalador no PATH com a variável de ambiente abaixo:
+
+        %USERPROFILE%\AppData\Roaming\Composer\vendor\bin
+
+    Após isso, reinciiar o powershell e digitar o comando abaixo na pasta desejada:
+
+        laravel new <<nome do projeto>>
+
+    Entrar na pasta do projeto e confirmar se a pasta "vendor" foi criada. Caso não tenha sido criada, verificar erro na internet.
+
+    No powershell, para abrir a porta do projeto de dentro da pasta, digitar o comando abaixo:
+
+        php artisan serve
+
+    Após isso será possível acessar o projeto via:
+    
+        http://localhost:8000

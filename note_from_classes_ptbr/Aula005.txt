@@ -1,0 +1,52 @@
+Aula 005: Instalação do Redis
+
+    Serve para armazenar chaves e valores em memória, armazenar em cache para economia de tempo.
+    Também usado para fila de eventos.
+
+    Habilitar Virtualização no Setup da Máquina.
+
+    Instalar o Docker. Pode ser feito com o Linux para Windows, porém Docker é melhor.
+
+    Logar no Docker após a instalação.
+
+    No powershell, para baixar imagem (no caso do redis), usar o comando abaixo:
+        docker pull redis
+    
+    Criar um contâiner para implementação do redis, comando abaixo:
+        docker run --name redis-server -p 6379:6379 -d redis
+        docker run --name <<nome do container sem espaço>> -p <<porta da imagem: porta que irá abrir/>expor>> -d <<imagem que irá utilizar>>
+
+    Verificar os contâiners em execução:
+        docker ps
+
+    Acessar o link "https://github.com/microsoftarchive/redis" e descompactar.
+
+    Dentro do arquivo descompactado, acessar a pasta via powershell.
+
+    Para confirmar a instalação do redis, basta executar no powershell:
+
+        .\redis-cli.executar
+    
+    No terminal do redis, testar criando uma key:
+
+        set nome luisfelipe
+        set <<chave>> <<valor>>
+
+    Para recuperar o valor, puxar pela chave:
+
+        get nome
+        get <<chave>>
+
+    ------------------------------
+    No Docker, após rodar "docker ps", para parar um container basta digitar:
+
+        docker stop <<container id>>
+    
+    Para verificar todos os containers, incluindo os parados, rodar:
+
+        docker ps -a
+
+    Para reiniciar um container, usar:
+
+        docker start <<container id>>
+        

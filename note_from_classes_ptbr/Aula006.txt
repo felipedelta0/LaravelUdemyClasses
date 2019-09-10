@@ -1,0 +1,67 @@
+Aula 009:
+
+    Editores de código recomendados:
+
+        Atom
+        Brackets
+        PhpStorm
+        Visual Studio Code
+
+    Atualmente, utilizando Visual Studio Code.
+
+    Extensions Recomendadas:
+        DotENV
+        Laravel 5 Snippets
+        Laravel Blade Snippets
+        PHP Intelephense
+    
+    Minhas Extensions Favoritas:
+        Auto Close Tag
+        Auto Complete Tag
+        Auto Rename Tag
+        Better Comments
+        Bracket Pair Colorizer
+        Color Highlight
+        CSS Formatter
+        CSS Peek
+        ESLint
+        Git History
+        Git Lens
+        HTML Boilerplate
+        HTML CSS Support
+        HTML Snippets
+        IntelliSense for CSS
+        Laravel Artisan
+        Material Dark Color Theme
+        Material Icon Theme
+        One Dark PhpStorm
+        PHP Debug
+        PHP DocBlocker
+        PHP Extension Pack
+        PHP Intelephense
+        PHP IntelliSense
+        Prettier - Code Formatter
+        vscode-icons
+
+    Fonte Instalada:
+        Fira Code
+
+    Minhas Configurações no Visual Studio Code:
+      {
+        "workbench.iconTheme": "material-icon-theme",
+        "workbench.colorTheme": "One Dark Pro Vivid",
+        "editor.fontFamily": "Fira Code",
+        "editor.fontLigatures": true,
+        "window.zoomLevel": 0,
+        "editor.fontSize": 18,
+        "editor.lineHeight": 24,
+        "editor.formatOnSave": true,
+        "editor.rulers": [
+          80,
+          120
+        ],
+        "editor.renderLineHighlight": "gutter",
+        "terminal.integrated.fontSize": 14,
+        "breadcrumbs.enabled": true,
+        "php.executablePath": "C:\\xampp\\php\\php.exe"
+      }

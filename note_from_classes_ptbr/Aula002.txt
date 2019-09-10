@@ -1,0 +1,26 @@
+Aula 002: Instalações necessárias
+
+    Instalar Chocolatey
+
+    Instalar Yarn via Chocolatey
+
+    Instalar NodeJS + NPM via Chocolatey
+
+    Instalação do XAMPP pode ser feita via aplicação padrão.
+        Ferramentas necessárias do XAMPP:
+            - Apache
+            - MySQL
+            - PHP
+            - phpMyAdmin
+        Pasta padrão: C:\xampp
+
+    Instalar PHP Composer
+        Via executável, apenas seguir o instalador.
+
+    Abrir o Powershell e rodar os comandos abaixo:
+        composer
+        composer --version
+        node --version
+        choco --version
+        yarn --version
+        npm --version

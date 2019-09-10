@@ -1,0 +1,30 @@
+Aula 004: Configuração do VirtuaHost no Apache
+
+    É uma forma de não precisar usar o "php artisan serve".
+    Assim, no htdocs fica a produção e em outro lugar do pc fica o dev env.
+
+    Para começar, copiar a pasta do projeto para a pasta HTDOCS do XAMPP.
+
+    Na pasta C:\xampp\apache\conf\extra, abrir o arquivo "httpd-vhosts.conf" com notepad++.
+
+    Na pasta C:\Windows\System32\drivers\etc, editar o arquivo "hosts".
+
+    No "httpd-vhosts.conf", inserir as configurações abaixo para produção para cada projeto novo:
+
+        <VirtualHost *.80> <<conexão de qualquer lugar que vai chegar na porta 80>>
+            DoumentRoot "C:\xampp\htdocs\<<nome da pasta do projeto>>\public <<pasta visivel pro virtualhost>>
+            ServerName teste-laravel <<dominio que quiser, deve estar no hosts do system32>>
+            DirectoryIndex index.php <<inserir o index do projeto que receberá todas as requisições>>
+            <Directory "C:\xampp\htdocs\<<nome da pasta do projeto>>\public"> <<pasta public do projeto que ficará visível pro virtualhost>>
+                Options All <<configurações necessárias para o funcionamento>>
+                AllowOverride All <<configurações necessárias para o funcionamento>>
+                Order Allow,Deny <<configurações necessárias para o funcionamento>>
+                Allow from all <<configurações necessárias para o funcionamento>>
+            </Directory>
+        </VirtualHost>
+
+    No arquivo "hosts", inserir a configuração abaixo para cada inclusão de endereço de domínio:
+        
+        127.0.0.1   teste-laravel <<ServerName do virtual host, podendo ser possível acessar pelo navegador pelo "http://teste-laravel" ou dar ping>>
+    
+    Com a opção acima, é preferencia para colocar em produção. Caso seja ambiente de desenvolvimento, pode ser pelo php artisan serve.
