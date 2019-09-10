@@ -1,0 +1,60 @@
+Aula 016: Nomeando Rotas
+
+    Serve para nomear as rotas para ter uma segurança no redirecionamento.
+
+    Assim podendo ser evitado de miss redirection em views, por exemplo.
+
+    Caso mude o nome do agrupamento da rota ou da rota em si, não afetaria os links das views.
+
+    Pois eles iriam pelos "names" das rotas, ao invés do "prefix" ou "get.
+
+    Esse acima foi um exemplo de problema, segue abaixo um exemplo do nomeio de rota:
+
+        Route::prefix('/app')->group(function () {
+
+            Route::get('/', function () {
+                return view("app");
+            })->name('app');
+
+            Route::get('/user', function () {
+                return view("user");
+            })->name('app.user');
+
+            Route::get('/profile', function () {
+                return view("profile");
+            })->name('app.profile');
+        });
+    
+    Nome é de acordo com a vontade.
+
+    Após isso, nas views pode ser chamado de outra forma, garantindo que se a rota for mudada, não ficará dependente na view.
+
+        <div>
+            <a href="{{ route('app.user') }}">User</a> <br>
+            <a href="{{ route('app.profile') }}">Profile</a> <br>
+            <a href="{{ route('app') }}">App</a>
+        </div>
+
+    {{ route () }} -> é uma função HELPER, essa direciona para a rota nomeada.
+
+    Após as rotas e as views estarem via nome, no prefix e no get podemos mudar a vontade, que continuará funcionando.
+
+    Exemplo alterado:
+
+        Route::prefix('/aplicacao')->group(function () {
+            Route::get('/', function () {
+                return view("app");
+            })->name('app');
+
+            Route::get('/usuario', function () {
+                return view("user");
+            })->name('app.user');
+
+            Route::get('/profile', function () {
+                return view("profile");
+            })->name('app.profile');
+        });
+    
+
+
+    
