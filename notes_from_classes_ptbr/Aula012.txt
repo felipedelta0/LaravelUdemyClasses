@@ -1,0 +1,25 @@
+Aula 012: Parâmetros de Rotas
+
+    Route::get()
+    Route - Classe
+    get() - Método
+    :: - Acesso a métodos estáticos
+
+    No terminal:
+
+        "php artisan route:list"
+
+        Serve para ver todas as rotas que estão criadas na aplicação.
+
+----------------------------------------------------------------------------------
+
+    Route::get('/teste', function() {
+    });
+
+    fuction() nesse escopo é o callback do método.
+
+    Route::get('/{param1}/{param2}'), function ($param1, $param2) 
+
+        Não é necessário que o nome do parametro dentro da rota seja o mesmo da variável.
+
+        É apenas uma convenção para se localizar dentro do código fonte.
