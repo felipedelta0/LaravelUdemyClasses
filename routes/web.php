@@ -22,3 +22,9 @@ Route::get('/teste', function () {
 Route::get('/ola/{nome}/{sobrenome}', function ($nome, $sb) { // Parâmetro na Rota {} - Não necessário ser o mesmo nome da variável
     echo "Olá! Seja bem vindo, {$nome} {$sb}!";
 });
+
+Route::get('/seunome/{nome?}', function ($nome = null) {
+    if (isset($nome))
+        return "Você não digitou nenhum nome.";
+    return "Olá! Seja bem vindo, $nome!";
+});

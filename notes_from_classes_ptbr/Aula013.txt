@@ -1,0 +1,11 @@
+Aula 013: Parâmetros Opcionais
+
+    Route::get('/seunome/{nome?}', function ($nome = null) {
+        echo "Olá! Seja bem vindo, $nome!";
+    });
+
+    Caso no parâmetro da rota possua um "?", será um parâmetro opicional.
+
+    Caso não passe o parâmetro, vai continuar a execução sem o valor do parâmetro.
+
+    Caso não seja passado, deverá iniciar o parâmetro na função.
