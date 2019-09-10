@@ -1,0 +1,15 @@
+Aula 014: Parâmetros com Regras
+
+    Os parâmetros de uma rota podem ser definidos como regras.
+
+    O Laravel utiliza de expressões regulares para regralizar os parâmetros de uma rota, se necessário.
+
+    É possível definir regras utilizando a cláusula "where" conforme abaixo:
+
+        Route::get('/rotacomregras/{nome}/{n}', function ($nome, $n) {
+        for ($i = 0; $i < $n; $i++)
+            echo "Olá, $nome, seja bem vindo!<br>";
+        })->where('nome', '[A-Za-z]+')
+            ->where('n', '[0-9]+');
+
+    Podem ser adicionados quantas "cláusulas" where forem necessárias.
