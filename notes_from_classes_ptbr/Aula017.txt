@@ -1,0 +1,23 @@
+Aula 017: Redirecionando requisições
+
+    Exemplo de redirecionamento:
+
+        Route::redirect('todosprodutos', 'produtos', 301);
+
+    Primeiro parâmetro é a rota de origem, segundo parâmetro é a rota para onde será redirecionado.
+
+    Redirecionamento independente do método HTTP.
+
+----------------------------------------------------------------------------------------------------------------
+
+    Outra forma de redirecionamento é a seguinte:
+
+        Route::get('todosprodutos2', function () {
+            return redirect()->route('meusprodutos');
+        });
+
+    Usando o redirect(), que irá retornar um objeto o qual será aplicado o método route().
+
+    Após aplicado o route(), de preferência inserir o nome da rota para o direcionamento.
+
+    Também podemos receber os dados na rota, se necessário.

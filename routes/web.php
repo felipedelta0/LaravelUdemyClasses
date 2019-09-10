@@ -58,3 +58,9 @@ Route::get('/produtos', function () {
     echo "<li>Mouse</li>";
     echo "</ol>";
 })->name('meusprodutos');
+
+Route::redirect('todosprodutos', 'produtos', 301);
+
+Route::get('todosprodutos2', function () {
+    return redirect()->route('meusprodutos');
+});
