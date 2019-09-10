@@ -11,6 +11,8 @@
 |
 */
 
+use Illuminate\Support\Facades\Request;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -63,4 +65,30 @@ Route::redirect('todosprodutos', 'produtos', 301);
 
 Route::get('todosprodutos2', function () {
     return redirect()->route('meusprodutos');
+});
+
+//////////////////////////////////////////////////////////////////
+
+Route::post('/requisicoes', function (Request $request) {
+    return 'Hello GET';
+});
+
+Route::post('/requisicoes', function (Request $request) {
+    return 'Hello POST';
+});
+
+Route::put('/requisicoes', function (Request $request) {
+    return 'Hello PUT';
+});
+
+Route::delete('/requisicoes', function (Request $request) {
+    return 'Hello DELETE';
+});
+
+Route::patch('/requisicoes', function (Request $request) {
+    return 'Hello PATCH';
+});
+
+Route::options('/requisicoes', function (Request $request) {
+    return 'Hello OPTIONS';
 });

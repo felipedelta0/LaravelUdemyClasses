@@ -1,0 +1,35 @@
+Aula 018: Métodos HTTP
+
+    Utilizar uma extensão para verificar o método HTTP.
+
+    Aplicações/extenções possíveis:
+
+        Advanced REST Cliente (ARC)
+        Postman
+        Insomnia
+
+----------------------------------------------------------------------------------
+
+    Protocolos HTTP:
+
+        GET -> Método para pegar algo do servidor, para retornar algo.
+                Qualquer requisição que não seja GET, necessita de um token @csrf.
+
+        POST -> Todo POST vem em forma de 'Request' (Importar com Illuminate)
+                Método mais usado para cadastrar, salvar dados, criar algo
+                Se retornar erro 419 no ARC, é por causa do CSRF
+                Proteção Cross Site Request Forgery.
+                É tratado na forma de um token (No Laravel), informado através de um @csrf no form.
+                Token é verificado para evitar que seja criado script na página logada.
+                Para editar e desligar a proteção, ir até o arquivo:
+                    app/Http/Middleware/VerifyCsrfToken.php
+                E adicionar a rota no $except.
+
+        PUT -> PUT é para salvar algo, atualizar algo.
+
+        PATCH -> PATCH é para salvar algo, atualizar algo, similar ao PUT.
+
+        DELETE -> Passar o DELETE e o $id, pois será usado para deletar algo.
+
+        OPTIONS -> Para passar opções de requisição permitidas para um determinado recurso em um servidor.
+        
