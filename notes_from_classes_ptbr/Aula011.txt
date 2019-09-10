@@ -1,0 +1,17 @@
+Aula 011: Trabalhando com Rotas
+
+    Rodar no terminal o "php artisan serve" para entrar no projeto via navegador "127.0.0.1:8000".
+
+    As rotas no Laravel são virtuais e não físicas.
+    
+    Sendo assim, as requisições são tratadas pelo arquivo de rotas e pelos controladores.
+
+    routes
+        api  - relacionado a acesso de aplicação via api
+        channels  - relacionado a broadcast, socket.io, etc
+        console  - relacionado a console
+        web  - relacionado as rotas de acesso do navegador
+
+    public/index.php irá carregar todo o framework do Laravel
+
+    
