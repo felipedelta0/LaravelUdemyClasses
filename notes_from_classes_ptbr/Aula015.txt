@@ -1,0 +1,30 @@
+Aula 015: Agrupamento de Rotas
+
+    Serve para agrupar todas as rotas relacionadas ao nome definido, exemplo:
+
+        Route::prefix('/app')->group(function () {
+
+            Route::get('/', function () {
+                return view("app");
+            });
+
+            Route::get('/user', function () {
+                return view("user");
+            });
+
+            Route::get('/profile', function () {
+                return view("profile");
+            });
+        });
+
+    O prefix agrup as rotas com inicio "/app" no exempo, juntamente com a função group.
+
+    Sendo assim, todas as rotas ali dentro que estejam após "/app" serão direcionadas para as rotas agrupadas.
+
+    Exemplo:
+
+        /app/profile -> irá para a rota acima
+
+-------------------------------------------------------------------------------------------------------------------
+
+    Views no Laravel utilizam o template "Blade"
