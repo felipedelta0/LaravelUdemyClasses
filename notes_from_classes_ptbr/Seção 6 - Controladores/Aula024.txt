@@ -1,0 +1,15 @@
+Aula 024: Métodos Create e Store
+
+    O método create deverá direcionar para o formulário de criação, idealmente.
+
+    No formulário de Criação, deveremos incluir o comando '@csrf', que criará um input hidden com um token do form.
+
+    O método store deverá, idealmente, efetuar o POST com os dados para a criação no banco.
+
+    Store irá receber os dados via POST, trabalhá-los no controlador para decidir o que será feito.
+
+    Os dados virão por padrão dentro de um $request que pode ser pego com $request->all();
+
+    Pode ser usando '$request->name' para pegar o dado de acordo com o NAME do html.
+
+    Para debuggar, usar o comando 'dd($request)' para usar como 'var_dump'.
