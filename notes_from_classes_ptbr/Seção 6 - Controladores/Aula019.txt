@@ -1,0 +1,25 @@
+Aula 019: Introdução
+
+    Laravel trabalha com MVC
+
+    MVC -> Model - View - Controller
+
+        CONTROLLER =>
+            Recebe a Requisição
+            Atende a requisição do usuário e deve tratar as requisições
+            Pode simplesmente retornar uma view
+            Pode requisitar dados através do model
+            Montar uma view usando os dados da model
+            Retornar para o usário
+
+        MODEL =>
+            Interage com a base de dados
+            Controller pode solicitar dados
+            Retorna os dados para o controlador tratar
+
+        VIEW =>
+            Representar os dados
+            É uma view "bonita" para ser mostrada ao usuário
+            Controlador pode montar a view
+
+    Requisições não devem ser tratadas dentro do arquivo de rotas!
