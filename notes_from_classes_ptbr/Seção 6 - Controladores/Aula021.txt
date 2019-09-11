@@ -1,0 +1,30 @@
+Aula 021: Requisições HTTP
+
+    Podemos criar um novo controlador com o '--resource' fará com que o controlador seja criado com métodos
+
+        php artisan make:controller ClienteControlador --resoure
+
+    Esse Controller já conterá os métodos HTTP abaixo:
+
+        index()
+            Método utilizado para acessar rota e mostrar todos os "clientes"
+
+        create()
+            Método para abrir um formulário para criar um novo "cliente"
+
+        store(Request $request)
+            Método para onde o POST do fomulário será redirecionado para salvar o "cliente"
+
+        show($id)
+            Método para ver informações de um determinado "cliente"
+
+        edit($id)
+            Método receberá o id e carregará um formulário com os dados para edição do "cliente"
+
+        update(Request $request, $id)
+            Método que irá efetivar as alterações feitas pelo método edit
+
+        destroy($id)
+            Método que irá apagar, deletar um "cliente"
+
+    Lembrando que são as idéias básicas para um controller.
