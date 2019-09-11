@@ -1,0 +1,24 @@
+composer
+
+composer --version
+
+node --version
+
+choco --version
+
+yarn --version
+
+npm --version
+
+laravel new <<nome do projeto>>
+
+php artisan
+
+php artisan serve
+
+php artisan route:list
+
+php artisan make:controller --help
+
+php artisan make:controller <<NomeDoControlador>>
+

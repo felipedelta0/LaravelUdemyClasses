@@ -1,0 +1,27 @@
+Aula 020: Criando o Controlador
+
+    No powershell:
+
+        'php artisan' -> Mostra todas as opçõeos do php artisan
+
+        'php artisan make:controller --help' -> mostra as opções para criar o controller
+
+        'php artisan make:controller MeuControlador' -> MeuControlador: nome do controlador
+    
+    Uma vez criado, controller será feito em 'app/Http/Controllers/'.
+
+    Uma classe que por padrão se extende da classe "Controller" padrão.
+
+    Na rota, para chamar o controlador, seguir o padrão:
+
+        Route::get('produtos', 'MeuControlador@produtos');
+    
+        Primeiramente informando a rota, no segundo parâmetro será informado:
+
+        <<NomeControlador>>@<<MétodoControlador>>
+
+    Controlador com parâmetros o Laravel trata automáticamente, exemplo:
+
+        Route::get('multiplicar/{n1}/{n2}', 'MeuControlador@multiplicar');
+
+    Já será enviado para a o método com as variável 'n1' e 'n2'
