@@ -1,0 +1,21 @@
+Aula 022: Associando rotas ao controlador
+
+    Primeiro passo, associar a rota ao controlador.
+
+    Deve ser criado as rotas após a criação do controlador.
+
+    Rotas podem ser feitas uma a uma por método do controlador.
+
+    Rotas podem ser feitas através da função 'resource()' para criar todas as rotas do controlador.
+
+    Assim já criará todas as 7 rotas de um resource (controlador do tipo resource). Todas nomeadas.
+
+        Route::resource('clientes', 'ClienteControlador');
+
+        Parâmetros: 'Nome da rota', 'Controlador da Rota'
+
+    Esse método deve ser usado quando o controlador foi feito através do comando:
+
+        php artisan make:controller <<NomeDoControlador>> --resoure
+
+    Ou que seja criado todos os métodos certinhos.
