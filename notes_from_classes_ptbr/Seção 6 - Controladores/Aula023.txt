@@ -1,0 +1,19 @@
+Aula 023: O Método Index
+
+    O método index tem como fundamento mostrar o índice de "usuários".
+
+    A melhor maneira de fazer é passar os dados para a View montar para o usuário.
+
+    @foreach()
+    @endforeach
+        Foreach em View
+
+    
+    Separação de views dentro de pasta, ao invés de fazer pasta/arquivo, deve ser pasta.arquivo
+
+    Métodos de passar variáveis para a view:
+
+        return view('clientes.index', 
+            compact(['clientes'])); -> <<Onde 'cliente' é o nome da variável no controlador>
+
+        return view('clientes.index', ['clientes' => $this->clientes]);

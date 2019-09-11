@@ -22,7 +22,8 @@ class ClienteControlador extends Controller
      */
     public function index()
     {
-        //
+        $clientes = $this->clientes;
+        return view('clientes.index', compact(['clientes']));
     }
 
     /**
