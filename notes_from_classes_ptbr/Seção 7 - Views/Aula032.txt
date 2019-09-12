@@ -1,0 +1,13 @@
+Aula 032: If/Else
+
+    @if(<<Condição>>)
+    @else
+    @endif
+
+    Dentro do @if, @foreach e outras função blade, podem ser usadas funções PHP dentro.
+
+    @empty($clientes)
+    <h4>Não possuem clientes cadastrados.</h4>
+    @endempty
+
+    @empty só mostra o conteúdo caso a variável da condição estiver vazia.
