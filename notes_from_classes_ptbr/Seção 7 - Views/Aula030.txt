@@ -1,0 +1,17 @@
+Aula 030: Introdução
+
+    Conforme dito antes, o controlador recebe a requisição da rota.
+
+    O Controlador irá mandar uma resposta de volta ao cliente que fez a requisição.
+
+    Uma view é uma maneira de encapsular uma resposta para enviar e mostrar para o usuário de uma maneira agradável.
+
+    Por exemplo, retornar uma UL com dados.
+
+    No Laravel, as views são gerada através de uma linguagem de formatação, o Blade.
+
+    Tem como objetivo uma abordagem prática para mostrar dados.
+
+    Seguindo as mecânicas do Blade para exibir informações.
+
+    Neste módulo poderá ser visto templates de views também.
