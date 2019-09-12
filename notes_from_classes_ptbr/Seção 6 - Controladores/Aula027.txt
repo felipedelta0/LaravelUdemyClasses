@@ -1,0 +1,18 @@
+Aula 027: Métodos Edit e Update
+
+    A ideia do método Edit seria abrir um formulário com as informações para atualizar.
+
+    Após atualizar os dados, o Edit deverá enviar para o Update para salvar os dados atualizados.
+
+    A atualização deve ser passada através de um método PUT.
+
+    Sempre se atentar para a rota, verificar caso a mesma necessite de algum parâmetro.
+
+    Formulário HTML só envia GET e POST.
+
+    No Laravel, incluir a função "@method('')" incluindo o método solicitado.
+
+    Após passar os dado para o PUT, deverá ser chamado no update para poder efetivar as alterações.
+
+    Edit -> Abre o formulário com o cliente que irá alterar
+    Update -> Ira efetivar as mudanças do formulário edit
