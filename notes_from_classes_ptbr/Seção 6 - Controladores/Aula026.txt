@@ -1,0 +1,9 @@
+Aula 026: O Método Show
+
+    O método show é usado para mostrar os dados de um registro de acordo com um parâmetro passado.
+
+    Geralmente, é buscado pelo parâmetro ID.
+
+    A ideia do método é recuperar as informações do 'cliente' pelo ID.
+
+        compact(['']) pode ter inúmeros parâmetros
