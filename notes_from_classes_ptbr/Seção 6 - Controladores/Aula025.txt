@@ -1,0 +1,9 @@
+Aula 025: Armazenando em Sessão
+
+    Armazenar os dados em sessão para não perdermos as informações quando o controlador recarregar.
+
+        $clientes = session('clientes');
+
+        Pega os dados da sessão na chave 'cliente' e armazena na variável $clientes.
+
+        
