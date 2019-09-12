@@ -1,0 +1,22 @@
+Aula 031: Passagem de Parâmetros
+
+    Lembrando que views dentro de pastas devem ser referenciadas usando nomedapasta.nomedaview
+
+    Omitir a extensão. A função "view()" irá buscar a view dentro da pasta views, por padrão.
+
+    Formas de passar parâmetros para a view:
+
+        return view('clientes.index')->with('clientes', $clientes);
+            with(<<VariavelNaView>>, <<VariavelNoController>>)
+
+            Variável na View também pode ser um "titulo", passando na view como {{ $titulo }}
+
+        with pode ser encadeado, exemplo: ->with()->with()->with();
+
+        return view('clientes.index', 
+            ['clientes' => $clientes]);
+
+            Array Associativo, o titulo que será usado na view => no controlador
+
+        O compact substitui o array associativo de uma forma mais rápida, transformando cada variável passada para ele
+        em um item do array associativo.
