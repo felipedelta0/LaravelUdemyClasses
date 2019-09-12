@@ -1,0 +1,20 @@
+Aula 028: O Método Destroy
+
+    A ideia do método destroy é receber uma requisição que ira deletar/excluir o registro.
+
+    A requisição é do método DELETE.
+
+    Deverá ser feito da mesma forma do EDIT, pois não é possível enviar requisição DELETE por HTML.
+
+    Vai ser enviada através de um método POST com o @method('DELETE'), para o Laravel entender o método.
+
+    Dicas Extras:
+
+        array_column($input, $column_key) -> retorna os valores de uma coluna do $input informado.
+
+        array_search($needle, $haystack) -> procura a $needle no $haystack
+
+        array_splice($input, $offset, [$length, [$replacement]]) -> remove a sequênciade elementos especificados por
+            $offset e $length do array $input.
+    
+    
